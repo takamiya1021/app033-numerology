@@ -1,0 +1,49 @@
+# ナノバナナ用プロンプト：App 33「数秘術風占い」
+
+## メイン画面の完成イメージ
+
+```
+Modern web application UI design for a numerology fortune-telling app.
+Mystical purple gradient background (#6B46C1 to #3B1F66) with subtle magical particle effects and soft golden sparkles.
+
+Center top: Large glowing life path number "7"
+Displayed in elegant golden illuminated font with mystical aura effect
+Below number: Japanese label "ライフパスナンバー"
+
+Middle section showing calculation animation:
+- Birthday input "1985年3月15日"
+- Animated arrows showing calculation process
+- Visual breakdown: "1+9+8+5+3+1+5 = 32 → 3+2 = 5 → Life Path 7"
+- Glowing golden particles following the calculation flow
+
+Personality profile card:
+- Elegant purple card with gold border
+- Title "性格診断" with decorative mystical symbols
+- Key traits in golden text with star icons
+- Personality description in Japanese
+
+Bottom section:
+- "今日の運勢" card with lucky color circle and lucky number
+- AI section with sparkle icon ✨
+- "詳細な解説" and "アドバイス" cards with AI-generated personalized content
+
+Side decorations:
+- Mystical symbols (stars, moons, sacred geometry) in transparent gold
+- Subtle purple-to-gold gradient borders on cards
+
+Color scheme:
+- Background: Deep purple (#6B46C1) to dark purple (#3B1F66)
+- Accent: Gold (#FFD700), light gold (#FFF4CC)
+- Text: White and light gold
+- Cards: Semi-transparent purple with gold borders
+
+Typography: Elegant serif-inspired Japanese font for headers, clean sans-serif for body
+Style: Mystical, magical, fortune-telling aesthetic with modern UI
+Layout: Vertical, centered, mobile-friendly with card-based design
+
+--ar 9:16 --style digital illustration with mystical effects --quality high
+```
+
+## 使い方
+このプロンプトをナノバナナにコピー&ペーストして画像生成してください。
+生成された画像を `complete-image.png` として保存してください。
