@@ -8,6 +8,7 @@ import { LifePathNumber } from '@/components/LifePathNumber';
 import { PersonalityProfile } from '@/components/PersonalityProfile';
 import { TodaysFortune } from '@/components/TodaysFortune';
 import { LuckyNumbers } from '@/components/LuckyNumbers';
+import { AIContentSection } from '@/components/AIContentSection';
 import { isMasterNumber } from '@/lib/numerology';
 import Link from 'next/link';
 
@@ -92,6 +93,9 @@ export default function Home() {
 
             {/* ラッキーナンバー */}
             <LuckyNumbers numbers={result.luckyNumbers} />
+
+            {/* AI生成コンテンツ */}
+            <AIContentSection lifePathNumber={result.lifePathNumber} />
           </div>
         )}
 
