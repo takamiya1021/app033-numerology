@@ -34,3 +34,16 @@ Thumbs.db
 # テストカバレッジ
 coverage/
 .nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# PWA
+*.pem
+.pnp
+.pnp.js
+.yarn/install-state.gz
