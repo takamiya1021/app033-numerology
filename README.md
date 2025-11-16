@@ -10,7 +10,7 @@
 
 ## 🌐 デモ
 
-**本番環境**: [https://app033-numerology-52reoo4mm.vercel.app](https://app033-numerology-52reoo4mm.vercel.app)
+https://app033-numerology.vercel.app
 
 > ⚠️ **APIキー設定**: AI生成機能を使用するには、画面右上の「⚙️ 設定」から[Google AI Studio](https://ai.google.dev/)のAPIキーを設定してください。
 
