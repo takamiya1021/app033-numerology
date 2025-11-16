@@ -9,12 +9,13 @@ import { PersonalityProfile } from '@/components/PersonalityProfile';
 import { TodaysFortune } from '@/components/TodaysFortune';
 import { LuckyNumbers } from '@/components/LuckyNumbers';
 import { AIContentSection } from '@/components/AIContentSection';
+import { SettingsModal } from '@/components/SettingsModal';
 import { isMasterNumber } from '@/lib/numerology';
 import Link from 'next/link';
 
 export default function Home() {
   const [birthdate, setBirthdate] = useState<Date>(new Date());
-  const [name, setName] = useState<string>('');
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const { result, calculate } = useNumerology();
 
   const handleCalculate = () => {
@@ -26,6 +27,16 @@ export default function Home() {
       <div className="container mx-auto max-w-4xl">
         {/* ヘッダー */}
         <div className="text-center mb-12 pt-8">
+          <div className="flex justify-end mb-4">
+            <button
+              onClick={() => setIsSettingsOpen(true)}
+              className="px-4 py-2 bg-mystic-purple-700/50 text-mystic-purple-200 rounded-lg hover:bg-mystic-purple-600/50 transition-colors flex items-center gap-2"
+              aria-label="設定"
+            >
+              ⚙️ 設定
+            </button>
+          </div>
+
           <h1 className="text-5xl font-bold text-mystic-gold-400 mb-4">
             🔮 数秘術風占い
           </h1>
@@ -49,8 +60,6 @@ export default function Home() {
           <BirthdateInput
             value={birthdate}
             onChange={setBirthdate}
-            name={name}
-            onNameChange={setName}
           />
 
           <button
@@ -106,6 +115,12 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      {/* 設定モーダル */}
+      <SettingsModal
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+      />
     </main>
   );
 }

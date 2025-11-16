@@ -20,16 +20,17 @@ export function AIContentSection({ lifePathNumber }: AIContentSectionProps) {
     advice: string;
   } | null>(null);
 
+  const apiKey = getApiKey();
+  const hasApiKey = !!apiKey;
+
   const handleGenerate = async () => {
     setIsGenerating(true);
 
     try {
-      const apiKey = getApiKey() || 'demo';
-
       const [explanation, message, advice] = await Promise.all([
-        generateAIContent(apiKey, lifePathNumber, 'explanation'),
-        generateAIContent(apiKey, lifePathNumber, 'message'),
-        generateAIContent(apiKey, lifePathNumber, 'advice'),
+        generateAIContent(apiKey || '', lifePathNumber, 'explanation'),
+        generateAIContent(apiKey || '', lifePathNumber, 'message'),
+        generateAIContent(apiKey || '', lifePathNumber, 'advice'),
       ]);
 
       setContent({
@@ -39,6 +40,7 @@ export function AIContentSection({ lifePathNumber }: AIContentSectionProps) {
       });
     } catch (error) {
       console.error('AI生成エラー:', error);
+      alert('AI生成に失敗しました。APIキーが正しいか確認してください。');
     } finally {
       setIsGenerating(false);
     }
@@ -48,13 +50,20 @@ export function AIContentSection({ lifePathNumber }: AIContentSectionProps) {
     <div className="space-y-6">
       {/* 生成ボタン */}
       {!content && (
-        <button
-          onClick={handleGenerate}
-          disabled={isGenerating}
-          className="w-full px-6 py-4 bg-gradient-to-r from-mystic-purple-600 to-mystic-purple-500 text-white font-bold text-lg rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
-        >
-          {isGenerating ? '✨ 生成中...' : '🤖 AI詳細解説を生成'}
-        </button>
+        <div className="space-y-2">
+          <button
+            onClick={handleGenerate}
+            disabled={isGenerating}
+            className="w-full px-6 py-4 bg-gradient-to-r from-mystic-purple-600 to-mystic-purple-500 text-white font-bold text-lg rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+          >
+            {isGenerating ? '✨ 生成中...' : '🤖 AI詳細解説を生成'}
+          </button>
+          {!hasApiKey && (
+            <p className="text-red-400 text-sm text-center">
+              ⚠️ APIキーが未設定です（デフォルトメッセージを表示します）
+            </p>
+          )}
+        </div>
       )}
 
       {/* 生成コンテンツ */}

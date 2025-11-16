@@ -25,23 +25,23 @@
 
 ### タスク
 
-- [ ] **0-1. Next.jsプロジェクトセットアップ（Red）**
+- [x] **0-1. Next.jsプロジェクトセットアップ（Red）**
   - `npx create-next-app@latest app033-numerology --typescript --tailwind --app`
   - プロジェクト構造確認
   - **完了条件**: `npm run dev`で起動確認
 
-- [ ] **0-2. Jest + React Testing Library設定（Green）**
+- [x] **0-2. Jest + React Testing Library設定（Green）**
   - `npm install --save-dev jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom`
   - `jest.config.js`作成
   - `setupTests.ts`作成
   - **完了条件**: `npm test`でテスト実行可能
 
-- [ ] **0-3. Framer Motion設定（Green）**
+- [x] **0-3. Framer Motion設定（Green）**
   - `npm install framer-motion`
   - アニメーションテスト用の設定
   - **完了条件**: Framer Motionが使用可能
 
-- [ ] **0-4. サンプルテスト作成・実行（Refactor）**
+- [x] **0-4. サンプルテスト作成・実行（Refactor）**
   - `__tests__/sample.test.ts`作成
   - テスト実行確認
   - **完了条件**: テストがパスすることを確認
@@ -52,19 +52,19 @@
 
 ### タスク
 
-- [ ] **1-1. 数字の意味データ作成（Green）**
+- [x] **1-1. 数字の意味データ作成（Green）**
   - `lib/numberMeanings.ts`作成
   - 1〜9, 11, 22, 33の意味データ定義
   - **完了条件**: 全数字のデータが定義済み
 
-- [ ] **1-2. 数秘術計算テスト作成（Red）**
+- [x] **1-2. 数秘術計算テスト作成（Red）**
   - `__tests__/lib/numerology.test.ts`作成
   - ライフパスナンバー計算のテストケース
   - マスターナンバー判定テスト
   - 計算過程取得テスト
   - **完了条件**: テストが失敗することを確認
 
-- [ ] **1-3. 数秘術計算ロジック実装（Green）**
+- [x] **1-3. 数秘術計算ロジック実装（Green）**
   - `lib/numerology.ts`作成
   - `calculateLifePathNumber()`関数実装
   - `reduceToSingleDigit()`関数実装
@@ -72,19 +72,19 @@
   - `getCalculationSteps()`関数実装
   - **完了条件**: 全テストがパス
 
-- [ ] **1-4. 相性診断ロジック実装（Red → Green）**
+- [x] **1-4. 相性診断ロジック実装（Red → Green）**
   - `__tests__/lib/numerology.test.ts`に相性診断テスト追加（Red）
   - `calculateCompatibility()`関数実装（Green）
   - 相性マトリックス定義（Green）
   - **完了条件**: 全テストがパス
 
-- [ ] **1-5. 型定義整備（Refactor）**
+- [x] **1-5. 型定義整備（Refactor）**
   - `types/numerology.ts`作成
   - `NumerologyResult`等のインターフェース定義
   - 関数の戻り値を型安全に
   - **完了条件**: TypeScriptエラーゼロ、テストパス
 
-- [ ] **1-6. カスタムフック作成（Red → Green → Refactor）**
+- [x] **1-6. カスタムフック作成（Red → Green → Refactor）**
   - `__tests__/hooks/useNumerology.test.ts`作成（Red）
   - `hooks/useNumerology.ts`実装（Green）
   - React Hooksのルール準拠確認（Refactor）
@@ -96,44 +96,44 @@
 
 ### タスク
 
-- [ ] **2-1. BirthdateInputテスト作成（Red）**
+- [x] **2-1. BirthdateInputテスト作成（Red）**
   - `__tests__/components/BirthdateInput.test.tsx`作成
   - カレンダー選択テスト
   - 名前入力（オプション）テスト
   - **完了条件**: テストが失敗することを確認
 
-- [ ] **2-2. BirthdateInputコンポーネント実装（Green）**
+- [x] **2-2. BirthdateInputコンポーネント実装（Green）**
   - `components/BirthdateInput.tsx`作成
   - カレンダーUI（31番・32番参考）
   - 名前入力フォーム（オプション）
   - **完了条件**: 全テストがパス
 
-- [ ] **2-3. CalculationAnimationテスト作成（Red）**
+- [x] **2-3. CalculationAnimationテスト作成（Red）**
   - `__tests__/components/CalculationAnimation.test.tsx`作成
   - ステップ表示テスト
   - アニメーション動作テスト
   - **完了条件**: テストが失敗することを確認
 
-- [ ] **2-4. CalculationAnimationコンポーネント実装（Green）**
+- [x] **2-4. CalculationAnimationコンポーネント実装（Green）**
   - `components/CalculationAnimation.tsx`作成
   - Framer Motionでステップアニメーション
   - 計算過程の順次表示
   - **完了条件**: 全テストがパス、アニメーション確認
 
-- [ ] **2-5. LifePathNumberテスト作成（Red）**
+- [x] **2-5. LifePathNumberテスト作成（Red）**
   - `__tests__/components/LifePathNumber.test.tsx`作成
   - 数字表示テスト
   - マスターナンバー表示テスト
   - **完了条件**: テストが失敗することを確認
 
-- [ ] **2-6. LifePathNumberコンポーネント実装（Green）**
+- [x] **2-6. LifePathNumberコンポーネント実装（Green）**
   - `components/LifePathNumber.tsx`作成
   - 数字を大きく表示
   - キラキラエフェクト
   - スケールアニメーション
   - **完了条件**: 全テストがパス、エフェクト確認
 
-- [ ] **2-7. その他表示コンポーネント実装（Red → Green → Refactor）**
+- [x] **2-7. その他表示コンポーネント実装（Red → Green → Refactor）**
   - `PersonalityProfile.tsx`（性格診断）
   - `TodaysFortune.tsx`（今日の運勢）
   - `LuckyNumbers.tsx`（ラッキーナンバー）
@@ -146,26 +146,26 @@
 
 ### タスク
 
-- [ ] **3-1. 相性診断ページ作成（Red → Green）**
+- [x] **3-1. 相性診断ページ作成（Red → Green）**
   - `__tests__/app/compatibility/page.test.tsx`作成（Red）
   - `app/compatibility/page.tsx`実装（Green）
   - 2つの誕生日入力フォーム
   - **完了条件**: 全テストがパス
 
-- [ ] **3-2. CompatibilityResultテスト作成（Red）**
+- [x] **3-2. CompatibilityResultテスト作成（Red）**
   - `__tests__/components/CompatibilityResult.test.tsx`作成
   - 相性スコア表示テスト
   - 星の評価表示テスト
   - **完了条件**: テストが失敗することを確認
 
-- [ ] **3-3. CompatibilityResultコンポーネント実装（Green）**
+- [x] **3-3. CompatibilityResultコンポーネント実装（Green）**
   - `components/CompatibilityResult.tsx`作成
   - 相性スコア表示（0-100%）
   - 星評価（⭐1-5）
   - 相性の良い点・注意点表示
   - **完了条件**: 全テストがパス
 
-- [ ] **3-4. 相性診断統合（Refactor）**
+- [x] **3-4. 相性診断統合（Refactor）**
   - 相性診断フロー全体の動作確認
   - アニメーション調整
   - **完了条件**: 全機能動作、テストパス
@@ -176,27 +176,27 @@
 
 ### タスク
 
-- [ ] **4-1. AIサービス共通化（31番・32番から流用）**
+- [x] **4-1. AIサービス共通化（31番・32番から流用）**
   - 共通`lib/aiService.ts`を使用
   - 33番用のプロンプト関数追加
   - **完了条件**: 共通モジュール使用可能
 
-- [ ] **4-2. 数秘術用プロンプト実装（Red → Green）**
+- [x] **4-2. 数秘術用プロンプト実装（Red → Green）**
   - `__tests__/lib/aiService.test.ts`に33番用テスト追加（Red）
   - 解説・メッセージ・行動指針のプロンプト実装（Green）
   - **完了条件**: 全テストがパス
 
-- [ ] **4-3. useAIGenerationフック調整（Refactor）**
+- [x] **4-3. useAIGenerationフック調整（Refactor）**
   - 共通`useAIGeneration.ts`を流用
   - 33番用のコンテンツ種別に対応
   - **完了条件**: 全テストパス、Hooks動作確認
 
-- [ ] **4-4. AIContentSectionコンポーネント（31番・32番から流用・調整）**
+- [x] **4-4. AIContentSectionコンポーネント（31番・32番から流用・調整）**
   - 共通`AIContentSection.tsx`を流用
   - 33番用の3項目表示に調整（解説・メッセージ・行動指針）
   - **完了条件**: 全テストパス、表示確認
 
-- [ ] **4-5. GenerateButton（共通から流用）**
+- [x] **4-5. GenerateButton（共通から流用）**
   - 共通`GenerateButton.tsx`をそのまま流用
   - **完了条件**: 動作確認
 
@@ -206,24 +206,24 @@
 
 ### タスク
 
-- [ ] **5-1. デザインシステム構築（Green）**
+- [x] **5-1. デザインシステム構築（Green）**
   - `tailwind.config.js`設定
   - 紫系・金色のカラーパレット定義
   - 神秘的グラデーション設定
   - **完了条件**: デザインシステム適用
 
-- [ ] **5-2. フォント設定（Green）**
+- [x] **5-2. フォント設定（Green）**
   - Google Fonts統合（Cinzel + Noto Serif JP）
   - フォント適用確認
   - **完了条件**: フォント表示確認
 
-- [ ] **5-3. 背景・エフェクト実装（Refactor）**
+- [x] **5-3. 背景・エフェクト実装（Refactor）**
   - 神秘的な背景グラデーション
   - キラキラエフェクト
   - パーティクルアニメーション（オプション）
   - **完了条件**: 神秘的な雰囲気完成
 
-- [ ] **5-4. レスポンシブ対応（Refactor）**
+- [x] **5-4. レスポンシブ対応（Refactor）**
   - モバイル・タブレット・デスクトップ対応
   - レイアウト調整
   - **完了条件**: 全デバイスで快適に表示
@@ -234,23 +234,23 @@
 
 ### タスク
 
-- [ ] **6-1. ストレージユーティリティ共通化（31番・32番から流用）**
+- [x] **6-1. ストレージユーティリティ共通化（31番・32番から流用）**
   - 共通`lib/storage.ts`を使用
   - 33番用のキー追加
   - **完了条件**: 共通モジュール使用可能
 
-- [ ] **6-2. 履歴保存機能実装（Red → Green → Refactor）**
+- [x] **6-2. 履歴保存機能実装（Red → Green → Refactor）**
   - `__tests__/lib/storage.test.ts`に33番用テスト追加（Red）
   - 診断履歴の保存・読み込み実装（Green）
   - **完了条件**: 全テストがパス
 
-- [ ] **6-3. 設定画面実装（Red → Green → Refactor）**
+- [x] **6-3. 設定画面実装（Red → Green → Refactor）**
   - `__tests__/app/settings/page.test.tsx`作成（Red）
   - `app/settings/page.tsx`実装（Green）
   - APIキー入力、履歴表示、データクリア（Green）
   - **完了条件**: 全テストパス、動作確認
 
-- [ ] **6-4. お気に入り機能実装（Refactor）**
+- [x] **6-4. お気に入り機能実装（Refactor）**
   - お気に入り登録ボタン
   - お気に入り一覧表示
   - **完了条件**: 全機能動作、テストパス
@@ -278,7 +278,7 @@
   - 相互リンク設定
   - **完了条件**: 連携動作確認
 
-- [ ] **7-4. デザイン統一（Refactor）**
+- [x] **7-4. デザイン統一（Refactor）**
   - 占い系アプリ全体のデザインテーマ統一
   - 紫系・神秘的な雰囲気の共通化
   - **完了条件**: デザイン一貫性確認
@@ -300,7 +300,7 @@
   - オフライン動作テスト
   - **完了条件**: オフラインで数秘術計算が動作
 
-- [ ] **8-3. アイコン作成（Green）**
+- [x] **8-3. アイコン作成（Green）**
   - `public/icon-192.png`作成（数秘術デザイン）
   - `public/icon-512.png`作成
   - ファビコン設定
@@ -325,19 +325,19 @@
   - テストの可読性・メンテナンス性向上
   - **完了条件**: E2Eテストコードが整理され、保守しやすい状態
 
-- [ ] **8-7. パフォーマンス最適化（Refactor）**
+- [x] **8-7. パフォーマンス最適化（Refactor）**
   - Lighthouse監査実行
   - パフォーマンススコア改善
   - アクセシビリティ改善
   - **完了条件**: Lighthouse スコア90以上（全カテゴリ）
 
-- [ ] **8-8. コードレビュー・リファクタリング（Refactor）**
+- [x] **8-8. コードレビュー・リファクタリング（Refactor）**
   - ESLint警告ゼロ
   - TypeScript strict mode有効化
   - コードコメント追加
   - **完了条件**: 静的解析エラーゼロ
 
-- [ ] **8-9. ドキュメント整備（完了）**
+- [x] **8-9. ドキュメント整備（完了）**
   - README.md作成
   - 開発ガイド記載
   - デプロイ手順記載
@@ -413,8 +413,10 @@
 ## 次ステップ
 
 1. ✅ 実装計画書レビュー・承認
-2. ⬜ 開発環境セットアップ（Phase 0開始）
-3. ⬜ Claude Code on the Webで実装開始
+2. ✅ 開発環境セットアップ（Phase 0完了）
+3. ✅ Phase 0-6 実装完了
+4. ⬜ Phase 7 占い系アプリ連携（残りタスク）
+5. ⬜ Phase 8 PWA対応・E2Eテスト（残りタスク）
 
 ---
 
