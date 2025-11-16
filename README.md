@@ -205,7 +205,7 @@ MIT License - 詳細は [LICENSE](LICENSE) ファイルを参照してくださ�
 
 ## 👨‍💻 作者
 
-**Hiroaki Yoshikura**
+**吉倉大晄（Hiroaki Yoshikura）**
 
 - GitHub: [@takamiya1021](https://github.com/takamiya1021)
 
