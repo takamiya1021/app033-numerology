@@ -15,6 +15,10 @@ export async function generateAIContent(
     return generateDemoContent(lifePathNumber, type);
   }
 
+  // タイムアウト設定（30秒）
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
+
   try {
     const prompt = generatePrompt(lifePathNumber, type);
 
@@ -36,8 +40,11 @@ export async function generateAIContent(
             },
           ],
         }),
+        signal: controller.signal,
       }
     );
+
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
       throw new Error('AI生成に失敗しました');
@@ -46,6 +53,13 @@ export async function generateAIContent(
     const data = await response.json();
     return data.candidates[0]?.content?.parts[0]?.text || generateDemoContent(lifePathNumber, type);
   } catch (error) {
+    clearTimeout(timeoutId);
+    
+    // タイムアウトエラーの場合
+    if (error instanceof Error && error.name === 'AbortError') {
+      throw new Error('AI生成がタイムアウトしました。時間をおいて再度お試しください。');
+    }
+    
     console.error('AI生成エラー:', error);
     return generateDemoContent(lifePathNumber, type);
   }
